@@ -4,9 +4,7 @@
                 <lang name="default">Greeting new user</lang>
         </name>
         <author>
-                <lang name="default">stfalcon-studio</lang>
-                <lang name="russian">stfalcon-studio</lang>
-                <lang name="ukrainian">stfalcon-studio</lang>
+                <lang name="default">Web-studio stfalcon.com</lang>
         </author>
         <homepage>http://stfalcon.com/</homepage>
         <version>0.2.0</version>
