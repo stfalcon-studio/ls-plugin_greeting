@@ -57,6 +57,7 @@ class PluginGreeting_HookGreeting extends Hook
             $sTitle = $this->Lang_Get('greeting_title');
             $sText = $this->Lang_Get('greeting_text', array('name' => $sLogin, 'url' => $sUrl,));
 
+	    // создаем разговор
             $this->SendTalk($sTitle, $sText, $oUserFrom, $oUserTo);
         }
     }
@@ -83,6 +84,8 @@ class PluginGreeting_HookGreeting extends Hook
         $oTalk->setText($sText);
         $oTalk->setDate(date("Y-m-d H:i:s"));
         $oTalk->setDateLast(date("Y-m-d H:i:s"));
+	// для того, чтобы пользователь от которого отправялются сообщения не видел их в списке своих сообщений
+	// до тогов момента пока кто-то не напишет комментарий к сообщению
         $oTalk->setUserIp(Config::Get('IP_SENDER'));
 	
 	// добавляем пользователей к разговору
