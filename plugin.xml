@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+        <name>
+                <lang name="default">Greeting new user</lang>
+        </name>
+        <author>
+                <lang name="default">stfalcon-studio</lang>
+                <lang name="russian">stfalcon-studio</lang>
+                <lang name="ukrainian">stfalcon-studio</lang>
+        </author>
+        <homepage>http://stfalcon.com/</homepage>
+        <version>0.2.0</version>
+        <requires>
+                <livestreet>0.4.2</livestreet>
+                <plugins>
+                </plugins>
+        </requires>
+        <description>
+                <lang name="default">Send private message to new user with greeting.</lang>
+                <lang name="russian">Отправляет приветствие новым пользователям.</lang>
+                <lang name="ukrainian">Надсилає привітання новим користувачам.</lang>
+        </description>
+        <delegate>
+                <module></module>
+                <action></action>
+                <template></template>
+                <entity></entity>
+        </delegate>
+</plugin>
