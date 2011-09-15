@@ -4,7 +4,7 @@
  * @Plugin Name: Greeting
  * @Plugin Id: greeting
  * @Plugin URI:
- * @Description: 
+ * @Description:
  * @Author: stfalcon-studio
  * @Author URI: http://stfalcon.com
  * @LiveStreet Version: 0.4.2
@@ -28,6 +28,7 @@ class PluginGreeting extends Plugin {
      * @return boolean
      */
     public function Activate() {
+        $this->Cache_Clean();
         return true;
     }
 
@@ -45,6 +46,7 @@ class PluginGreeting extends Plugin {
      * @return boolean
      */
     public function Deactivate() {
+        $this->Cache_Clean();
         return true;
     }
 
