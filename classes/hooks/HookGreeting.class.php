@@ -86,6 +86,7 @@ class PluginGreeting_HookGreeting extends Hook
         $oTalk->setText($sText);
         $oTalk->setDate(date("Y-m-d H:i:s"));
         $oTalk->setDateLast(date("Y-m-d H:i:s"));
+    // Устанавлюем UserIdLast 
         $oTalk->setTalkUserIdLast($oUserFrom->getId());
 	// для того, чтобы пользователь от которого отправялются сообщения не видел их в списке своих сообщений
 	// до тогов момента пока кто-то не напишет комментарий к сообщению
