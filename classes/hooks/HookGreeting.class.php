@@ -32,6 +32,8 @@ class PluginGreeting_HookGreeting extends Hook
      * @param array $aVars
      * @return void
      */
+    
+    
     public function GreetUser($aVars)
     {
         $oUserTo = &$aVars['result'];
@@ -52,10 +54,10 @@ class PluginGreeting_HookGreeting extends Hook
 	    
 	    // формируем заголовок и текст сообщения
 	    $sLogin = $oUserTo->getLogin();
-	    $sUrl = Router::GetPath('page') . Config::Get('plugin.greeting.page_name');
+	    $sUrl = Router::GetPath('page') . Config::Get('page_name');
 	    
-            $sTitle = $this->Lang_Get('greeting_title');
-            $sText = $this->Lang_Get('greeting_text', array('name' => $sLogin, 'url' => $sUrl,));
+            $sTitle = $this->Lang_Get('plugin.greeting.greeting_title');
+            $sText = $this->Lang_Get('plugin.greeting.greeting_text', array('name' => $sLogin, 'url' => $sUrl,));
 
 	    // создаем разговор
             $this->SendTalk($sTitle, $sText, $oUserFrom, $oUserTo);
@@ -84,6 +86,8 @@ class PluginGreeting_HookGreeting extends Hook
         $oTalk->setText($sText);
         $oTalk->setDate(date("Y-m-d H:i:s"));
         $oTalk->setDateLast(date("Y-m-d H:i:s"));
+    // Устанавлюем параметр UserIdLast 
+        $oTalk->setTalkUserIdLast($oUserFrom->getId());
 	// для того, чтобы пользователь от которого отправялются сообщения не видел их в списке своих сообщений
 	// до тогов момента пока кто-то не напишет комментарий к сообщению
         $oTalk->setUserIp(Config::Get('IP_SENDER'));
