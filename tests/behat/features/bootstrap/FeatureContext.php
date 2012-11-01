@@ -19,15 +19,6 @@ require_once("tests/behat/features/bootstrap/BaseFeatureContext.php");
 class FeatureContext extends BaseFeatureContext
 {
 
-
-
-    /**
-     * @Then /^I wait$/
-     */
-    public function iWait()
-    {
-        $this->getSession()->wait(5000);
-    }
 }
 
 
