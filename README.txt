@@ -24,7 +24,7 @@ v0.3.0
 
 v0.2.0
 - Добавлена поддержка плагина l10n
-- Это последняя версия, которая работает с LiveStreet v0.5.1. Скачать её можно по ссылке  https://github.com/stfalcon-studio/ls-plugin_greeting/zipball/ls-0.5
+- Это последняя версия, которая работает с LiveStreet v0.5.1. Скачать её можно по ссылке  https://github.com/stfalcon-studio/ls-plugin_greeting/archive/v0.2.0.zip
 
 v0.1.0
 - Релиз плагина
