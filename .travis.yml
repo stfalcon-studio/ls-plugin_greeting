@@ -34,8 +34,7 @@ before_script:
 
   - rm -rf ./install
   - ls -la
-  - wget -S http://livestreet.test/ -O /tmp/greeting_test.html
-  - cat /tmp/greeting_test.html
+  - wget -S http://livestreet.test/ -O /dev/null
 
   # start virtual display
   - sh -e /etc/init.d/xvfb start
