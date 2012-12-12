@@ -18,14 +18,15 @@ require_once("tests/behat/features/bootstrap/BaseFeatureContext.php");
  */
 class FeatureContext extends MinkContext
 {
-    public function __construct(array $parameters) {
+    public function __construct(array $parameters)
+    {
         $this->parameters = $parameters;
         $this->useContext('base', new BaseFeatureContext($parameters));
     }
 
-//    public function getMinkContext() {
-//        return $this->getMainContext();
-//    }
+    public function getEngine() {
+        return $this->getSubcontext('base')->getEngine();
+    }
 }
 
 
