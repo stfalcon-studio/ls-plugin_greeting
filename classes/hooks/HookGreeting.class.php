@@ -54,11 +54,9 @@ class PluginGreeting_HookGreeting extends Hook
 	    
 	    // формируем заголовок и текст сообщения
 	    $sLogin = $oUserTo->getLogin();
-	    $sUrl = Router::GetPath('page') . Config::Get('page_name');
-	    
+	    $sUrl = Router::GetPath('page') . Config::Get('plugin.greeting.page_name');
             $sTitle = $this->Lang_Get('plugin.greeting.greeting_title');
             $sText = $this->Lang_Get('plugin.greeting.greeting_text', array('name' => $sLogin, 'url' => $sUrl,));
-
 	    // создаем разговор
             $this->SendTalk($sTitle, $sText, $oUserFrom, $oUserTo);
         }
