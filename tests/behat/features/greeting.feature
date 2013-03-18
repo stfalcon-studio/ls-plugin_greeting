@@ -20,6 +20,6 @@ Feature: Greeting plugin standart features BDD
             And I should see "If you have any questions about using the website, then you can ask them here or search for answers on this page."
             And I should see "/page/about">this page</a>"
 
-            Then I should not see in element by css "content" values:
-            | value                                |
+        Then I should see in element by css "content" values:
+            | value |
             | /page/about">this page</a> |
