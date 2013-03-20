@@ -16,6 +16,7 @@ Feature: Greeting plugin standart features BDD
             Then I should see "Welcome to our site!"
             Then I wait "2000"
             When I follow "Welcome to our site!"
+            And I wait "2000"
             And I should see "Welcome to our site!"
             And I should see "If you have any questions about using the website, then you can ask them here or search for answers on this page."
             And I should see in element by css "content" values:
